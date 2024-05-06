@@ -1,0 +1,9 @@
+{
+  "name": "infra_for_aws_simple_chat",
+  "version": "1.0.0",
+  "author": "SAM CLI",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.655.0"
+  }
+}

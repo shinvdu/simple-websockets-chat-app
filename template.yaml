@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Simple Websocket Chat App
+
+Resources:
+  Lambdas:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: ./lambdas/lambdas.yaml
+
+Outputs:
+  FrontendJSONConfig:
+    Value: !Sub '{ "WEBSOCKET_ENDPOINT": "${Lambdas.Outputs.WebSocketURI}" }'
+    Description: Config to put in the frontend/src/config.json file
